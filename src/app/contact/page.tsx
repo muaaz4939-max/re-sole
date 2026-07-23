@@ -23,7 +23,7 @@ const contactMethods = [
     title: "Email",
     description: "For detailed inquiries and bulk orders",
     action: "Send Email",
-    href: "mailto:hello@re-sole.com",
+    href: "mailto:hello@vintsole.com",
     color: "from-blue-500 to-indigo-500",
     bg: "bg-blue-50",
   },

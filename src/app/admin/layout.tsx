@@ -14,7 +14,7 @@ export default function AdminLayout({
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <Link href="/admin/dashboard" className="flex items-center gap-2">
             <ShoppingBagIcon className="size-5 text-primary" />
-            <span className="font-bold text-foreground">Re-Sole Admin</span>
+            <span className="font-bold text-foreground">Vintsole Admin</span>
           </Link>
           <div className="flex items-center gap-4">
             <Link

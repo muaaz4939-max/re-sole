@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
   // When CallMeBot is configured, send WhatsApp message here:
   // const phone = process.env.CALLMEBOT_PHONE
   // const apikey = process.env.CALLMEBOT_APIKEY
-  // const message = `🛒 *New Order — Re-Sole*\n\n*Product:* ${product.title} (${product.brand})\n*Size:* ${body.size}\n*Price:* Rs. ${product.price}\n\n*Customer:* ${body.customer_name}\n*Phone:* ${body.phone}\n*Address:* ${body.address}\n*Qty:* ${body.quantity}\n*Notes:* ${body.notes || "None"}`
+  // const message = `🛒 *New Order — Vintsole*\n\n*Product:* ${product.title} (${product.brand})\n*Size:* ${body.size}\n*Price:* Rs. ${product.price}\n\n*Customer:* ${body.customer_name}\n*Phone:* ${body.phone}\n*Address:* ${body.address}\n*Qty:* ${body.quantity}\n*Notes:* ${body.notes || "None"}`
   // await fetch(`https://api.callmebot.com/whatsapp.php?phone=${phone}&text=${encodeURIComponent(message)}&apikey=${apikey}`)
 
   return NextResponse.json(data, { status: 201 })

@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Re-Sole | Quality Used Shoes",
+  title: "Vintsole | Quality Used Shoes",
   description:
     "Browse quality used sneakers, formal shoes, and sports footwear at affordable prices. Every pair inspected and graded.",
 }

@@ -65,7 +65,7 @@ export default function AdminLoginPage() {
               id="email"
               type="email"
               required
-              placeholder="admin@resole.com"
+              placeholder="admin@vintsole.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="mt-1.5"

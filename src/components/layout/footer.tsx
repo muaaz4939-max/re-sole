@@ -23,7 +23,7 @@ export function Footer() {
               <div className="flex size-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-cyan-500">
                 <ShoppingBagIcon className="size-4.5 text-white" />
               </div>
-              <span className="text-xl font-bold tracking-tight">Re-Sole</span>
+              <span className="text-xl font-bold tracking-tight">Vintsole</span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-gray-400">
               Quality used shoes at affordable prices. Every pair inspected,
@@ -80,7 +80,7 @@ export function Footer() {
 
         <div className="mt-12 border-t border-white/10 pt-8 flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-xs text-gray-500">
-            &copy; 2026 Re-Sole. All rights reserved.
+            &copy; 2026 Vintsole. All rights reserved.
           </p>
           <p className="flex items-center gap-1 text-xs text-gray-500">
             Made with <HeartIcon className="size-3 fill-red-500 text-red-500" /> for shoe lovers

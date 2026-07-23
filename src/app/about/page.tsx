@@ -70,7 +70,7 @@ export default function AboutPage() {
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-20 text-center md:py-28">
           <h1 className="text-4xl font-bold text-white md:text-5xl">
-            About <span className="bg-gradient-to-r from-sky-400 to-cyan-300 bg-clip-text text-transparent">Re-Sole</span>
+            About <span className="bg-gradient-to-r from-sky-400 to-cyan-300 bg-clip-text text-transparent">Vintsole</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
             We believe great shoes deserve a second life. Every pair we sell is

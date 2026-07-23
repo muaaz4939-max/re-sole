@@ -40,7 +40,7 @@ export function Header() {
             <ShoppingBagIcon className="size-4.5 text-white" />
           </div>
           <span className="text-xl font-bold tracking-tight text-foreground">
-            Re-Sole
+            Vintsole
           </span>
         </Link>
 
