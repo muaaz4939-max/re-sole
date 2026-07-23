@@ -1,6 +1,9 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRightIcon } from "lucide-react"
+import { ArrowRightIcon, Loader2Icon } from "lucide-react"
 
 const categories = ["Men", "Women", "Kids"]
 
@@ -11,13 +14,30 @@ const categoryImages: Record<string, string> = {
   Kids: "https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=500&h=600&fit=crop",
 }
 
-const categoryCounts: Record<string, number> = {
-  Men: 4,
-  Women: 3,
-  Kids: 2,
-}
-
 export function CategorySection() {
+  const [counts, setCounts] = useState<Record<string, number>>({
+    Men: 0,
+    Women: 0,
+    Kids: 0,
+  })
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchCounts = async () => {
+      const res = await fetch("/api/products")
+      const products = await res.json()
+      const c: Record<string, number> = { Men: 0, Women: 0, Kids: 0 }
+      for (const p of products) {
+        if (!p.sold && c[p.category] !== undefined) {
+          c[p.category]++
+        }
+      }
+      setCounts(c)
+      setLoading(false)
+    }
+    fetchCounts()
+  }, [])
+
   return (
     <section className="mx-auto max-w-7xl px-4 py-20">
       <div className="text-center">
@@ -56,7 +76,11 @@ export function CategorySection() {
                 <div>
                   <h3 className="text-2xl font-bold text-white">{cat}&apos;s</h3>
                   <p className="mt-1 text-sm text-gray-300">
-                    {categoryCounts[cat]} pairs available
+                    {loading ? (
+                      <Loader2Icon className="inline size-3 animate-spin" />
+                    ) : (
+                      `${counts[cat]} pair${counts[cat] !== 1 ? "s" : ""} available`
+                    )}
                   </p>
                 </div>
                 <div className="flex size-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:bg-primary group-hover:scale-110">
